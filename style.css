@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Bakervvile|Merriweather|Poppins|Roboto+Condensed&display=swap');
+body{
+  margin:0;
+}
+
+p{
+  font-family: 'Poppins' !important;
+  font-size: 1.1rem;
+  line-height:1.7;
+  color:#595959;
+}
+a{
+  font-family:'Roboto Condensed';
+  transition: border-bottom 0.3s ease-in-out;
+  padding-bottom: .2rem;
+  /* font-family:'Poppins' !important; */
+}
+a:hover{
+  border-bottom: 2px solid #7be3d2;
+}
+
+h1{
+  font-family:'Roboto Condensed';
+  font-size:3rem
+}
+
+.separator:before{
+  float:left;
+}
+.separator:after{
+  float:right;
+}
+
+.separator:before, .separator:after {
+  display: block;
+  width: 47%;
+  content: " ";
+  margin-top: 10px;
+  border: 2px solid white;
+}
+
+.small:before{
+  float:left;
+}
+.small:after{
+  float:right;
+}
+
+.small:before, .small:after {
+  display: block;
+  width: 45%;
+  content: " ";
+  margin-top: 5px;
+  border: 2px solid black;
+}
+
+span:before{
+  content:' ';
+  height:7px;
+  width:7px;
+  border-radius:50%;
+  background-color:#7be3d2;
+  transition: background-color 0.3s ease-in;
+}
+h2{
+  font-size:1.8rem;
+  color:#404040;
+  letter-spacing:1;
+  font-family:'Poppins';
+}
