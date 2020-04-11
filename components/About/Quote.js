@@ -98,6 +98,14 @@ export default function Quote(props){
               span[data-quote="${active}"]:before{
                 background-color:cadetblue;
               }
+              span:before{
+                content:' ';
+                height:7px;
+                width:7px;
+                border-radius:50%;
+                background-color:#7be3d2;
+                transition: background-color 0.3s ease-in;
+              }
             `}</style>
         </div>
       </div>
