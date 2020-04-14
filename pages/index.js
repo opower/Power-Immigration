@@ -3,8 +3,9 @@ import NavMenu from '../components/NavMenu';
 import image from './assets/vancouver.jpg';
 import About from '../components/About';
 import Footer from '../components/Footer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import ModalComp from '../components/Modal';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Index () {
@@ -13,7 +14,7 @@ export default function Index () {
     background :{
       background: `url(${image})`,
       height: '100vh',
-      width:'100vw',
+      width:'100%',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -22,7 +23,7 @@ export default function Index () {
     },
     center:{
       textAlign:'center',
-      marginTop:'15vh',
+      marginTop:'18vh',
       color:'white',
       fontFamily:'Lato',
       letterSpacing:2,
@@ -51,12 +52,11 @@ export default function Index () {
         <h1>POWER IMMIGRATION AND CONSULTING</h1>
         <div className='separator'>♦</div>
         <h2 style={{fontFamily:'Roboto Condensed', color:'white'}}>Create Your Unique Canadian Experience</h2>
-        <button style={styles.button} onClick={console.log('hi')}><FontAwesomeIcon style={styles.chevron} icon={faChevronDown}/></button>
-        
       </div>
     </div>
     <div>
       <About/>
+      <ModalComp/>
       <Footer/>
     </div></>
   );

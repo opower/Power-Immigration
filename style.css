@@ -13,11 +13,11 @@ a{
   font-family:'Roboto Condensed';
   transition: border-bottom 0.3s ease-in-out;
   padding-bottom: .2rem;
-  /* font-family:'Poppins' !important; */
+
 }
-a:hover{
-  border-bottom: 2px solid #7be3d2;
-}
+/* a:hover{
+  border-bottom: 2px solid #72dbca;
+} */
 
 h1{
   font-family:'Roboto Condensed';

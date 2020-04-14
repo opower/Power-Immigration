@@ -7,7 +7,7 @@ export default function Sam(){
   const styles= {
     container:{
       textAlign:'center',
-      backgroundColor:'#8c8c8c',
+      backgroundColor:'#737373',
       padding:'5rem 1rem',
     },
     avatar:{

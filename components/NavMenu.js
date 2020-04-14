@@ -9,7 +9,7 @@ export default function NavMenu(props){
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 100 || props.color ) {
         setColor(true)
       } else {
         setColor(false)
@@ -26,7 +26,8 @@ export default function NavMenu(props){
       backgroundColor:`${ navColor ? '#7be3d2' : 'transparent' }`,
       position:'sticky',
       top:0,
-      transition: '.5s ease'
+      transition: '.5s ease',
+      zIndex:2
     }
   }
 
@@ -53,9 +54,12 @@ export default function NavMenu(props){
           }
           a{
             text-decoration:none;
-            color: white;
+            color: #f2f2f2;
             letter-spacing:2px;
           },
+          a:hover{
+            color:white;
+          }
         
         `}</style>
       </div>
