@@ -16,7 +16,7 @@ export default function News(){
     'q=border&' +
     'q=immigration&' +
     'from='+`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()-14}`+ '&' +
-    `apiKey=${process.env.NEWS}`)
+    'apiKey=process.env.NEWS)
     .then(function(response) {
         setArticles(response.data.articles);
         console.log(articles)

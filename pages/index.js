@@ -18,12 +18,14 @@ export default function Index () {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      opacity:'.95'
+      opacity:'.95',
+      paddingTop:'30vh',
+      marginTop: '-150px',
+      position: 'relative'
 
     },
     center:{
       textAlign:'center',
-      marginTop:'18vh',
       color:'white',
       fontFamily:'Lato',
       letterSpacing:2,
@@ -46,19 +48,21 @@ export default function Index () {
     }
   }
   return(
-    <><div style={styles.background}>
+    <>
       <NavMenu/>
-      <div style={styles.center}>
-        <h1>POWER IMMIGRATION AND CONSULTING</h1>
-        <div className='separator'>♦</div>
-        <h2 style={{fontFamily:'Roboto Condensed', color:'white'}}>Create Your Unique Canadian Experience</h2>
+      <div style={styles.background}>
+        <div className='view' style={styles.center}>
+          <h1>POWER IMMIGRATION AND CONSULTING</h1>
+          <div className='separator'>♦</div>
+          <h2 style={{fontFamily:'Roboto Condensed', color:'white'}}>Create Your Unique Canadian Experience</h2>
+        </div>
       </div>
-    </div>
-    <div>
-      <About/>
-      <ModalComp/>
-      <Footer/>
-    </div></>
+      <div>
+        <About/>
+        <ModalComp/>
+        <Footer/>
+      </div>
+    </>
   );
 
 }

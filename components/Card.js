@@ -24,7 +24,7 @@ export default function MediaCard(props) {
 
   return (
     <>
-    {!articles ? null : articles.map(article => {
+    {!articles ? null : articles.slice(0,9).map(article => {
       return(
         <div style={{display:'inline-flex'}}>
           <Card className={classes.root}>

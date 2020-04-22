@@ -22,7 +22,7 @@ const sendMail = function(data) {
     <h3>Phone: ${data.phone}<br/></h3>
     <h3>Date of Birth: ${data.dob}<br/></h3>
     <h3>Citizenship: ${data.cit}<br/></h3>
-    <h3>Service: ${data.service}</h3>
+    <h3>Residency: ${data.res}</h3>
     </div>`
   }
   transporter.sendMail(mailOptions, function(error, info){

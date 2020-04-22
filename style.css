@@ -15,9 +15,9 @@ a{
   padding-bottom: .2rem;
 
 }
-/* a:hover{
-  border-bottom: 2px solid #72dbca;
-} */
+a:hover{
+  border-bottom: 2px solid white;
+}
 
 h1{
   font-family:'Roboto Condensed';
@@ -67,4 +67,66 @@ h2{
   color:#404040;
   letter-spacing:1;
   font-family:'Poppins';
+}
+.footer{
+  display:flex;
+  justify-content:space-around;
+}
+
+@media screen and (max-width: 450px) {
+  /* body {
+    background-color: blue;
+  } */
+  .testimonials{
+    display:none !important;
+    background-color:green
+  }
+  .footer{
+    text-align: center;
+    display:block;
+  }
+  .nav{
+    display:none !important;
+  }
+  
+  .smallNav{
+    display:flex !important;
+    justify-content: flex-end;
+    padding: 1rem;
+    
+  }
+
+  .description{
+    display: block !important;
+    text-align: center;
+    
+  }
+  .description p {
+    max-width: 100% !important;
+  }
+
+  .description h2{
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 400px) {
+  /* body {
+    background-color: red;
+  } */
+  .description{
+    display: block !important;
+    text-align: center;
+    
+  }
+
+  .description p {
+    max-width: 100% !important;
+  }
+
+  .description h2{
+    margin-bottom: 3rem;
+  }
+
+
+
 }

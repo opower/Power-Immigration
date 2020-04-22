@@ -13,7 +13,9 @@ export default function Form(){
   const [cit, setCit] = useState('');
   const [dob, setDob] = useState('');
   const [phone, setPhone] = useState('');
-  const [service, setService] = useState('');
+  const [res, setRes] = useState('');
+  const [temp, setTemp] = useState('');
+  const [permanet, setPermanet] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +26,7 @@ export default function Form(){
       cit: cit.trim(),
       dob,
       phone: phone.trim(),
-      service
+      res
     }
 
     axios.post('http://localhost:8080/submit', {data: info})
@@ -130,13 +132,26 @@ export default function Form(){
         </Grid>
       </Grid>
       <Grid item xs={12}>
-      `<TextField required variant="outlined" id="select" label="Service" select fullWidth onChange={event=>setService(event.target.value)}>
-        <MenuItem value="Worker">Worker</MenuItem>
-        <MenuItem value="Student">Student</MenuItem>
-        <MenuItem value="Sponsor">Sponsor</MenuItem>
-        <MenuItem value="Visitor">Visitor</MenuItem>
-        <MenuItem value="Express">Express</MenuItem>
+      <TextField required variant="outlined" id="select" label="Residency" select fullWidth onChange={event=>setRes(event.target.value)}>
+        <MenuItem value="Temporary">Temporary Resident</MenuItem>
+        <MenuItem value="Permanent">Permanent Resident</MenuItem>
+      </TextField>
+      {/* {if(res === 'Temporary'){
+        <TextField required variant="outlined" id="select" label="Temporary Resident" select fullWidth onChange={event=>setTemp(event.target.value)}>
+          <MenuItem value="Visit">Visit</MenuItem>
+          <MenuItem value="Study">Study</MenuItem>
+          <MenuItem value="Work">Work</MenuItem>
+        </TextField>   
+      } else if (res === 'Permanent'){
+        <TextField required variant="outlined" id="select" label="Permanent Resident" select fullWidth onChange={event=>setPerman(event.target.value)}>
+          <MenuItem value="Skilled">Skilled Worker</MenuItem>
+          <MenuItem value="Sponsorship">Family Class Sponsorship</MenuItem>
         </TextField>
+
+      }
+      } */}
+
+
       </Grid>
       <Grid item xs={12} style={{margin:'auto'}}>
         <button type='submit' style={styles.button}>Submit</button>

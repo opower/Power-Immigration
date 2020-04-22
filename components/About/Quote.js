@@ -83,7 +83,7 @@ export default function Quote(props){
   return(
     <div style={styles.outer}>
       <div style={{textAlign:'center', margin:'4rem'}}>
-        <div style={styles.card}>
+        <div style={styles.card} className='testimonials'>
           <p style={styles.p1}>"{current.quote}"</p>
           <p style={styles.p}>- {current.client}</p>
           <div style={styles.container}>
@@ -109,10 +109,10 @@ export default function Quote(props){
             `}</style>
         </div>
       </div>
-      <div style={styles.aside}>
+      {/* <div style={styles.aside}>
         <p>Power Immigration and Consulting is licensed by the Immigration Consultants of Canada Regulatory Council.</p>
         <img src={img} alt='iccrc'/>
-      </div>
+      </div> */}
     </div>
   );
 }

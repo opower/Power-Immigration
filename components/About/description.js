@@ -18,7 +18,7 @@ export default function Description(){
   }
 
   return(
-    <div style={styles.container}>
+    <div className='description' style={styles.container}>
       <div style={styles.center}>
         <p style={{textAlign:'center', color:'#404040'}}>Est. 2017</p>
         <h2 style={{fontSize:'1.5rem'}}>Why Power Immigration and Consulting?</h2>

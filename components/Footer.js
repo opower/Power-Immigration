@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faLinkedin } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { div } from '@material-ui/core';
 
 export default function Footer (){
 
@@ -17,9 +17,6 @@ export default function Footer (){
       backgroundColor:'#737373',
       padding:'1rem',
       color:'white',
-      height:120,
-      display:'flex',
-      justifyContent:'space-around',
       fontFamily:'Roboto Condensed',
     },
     copy:{
@@ -52,6 +49,7 @@ export default function Footer (){
 
   return(
       <><div style={styles.container}>
+        <div className='footer'>
         <div>
           <h4>Contact Us</h4>
           (604)-753-8616 
@@ -72,9 +70,10 @@ export default function Footer (){
             <button style={styles.button}type='submit'>Submit</button>
           </form>
         </div>
+        </div>
       </div>
       <div style={styles.copy}>
-         <h4 style={{margin:0, paddingBottom:'1rem'}}>Copyright © Made By Olivia {new Date().getFullYear()}</h4>
+         <h4 style={{margin:0, paddingBottom:'1rem'}}>© {new Date().getFullYear()} Made By Olivia</h4>
       </div></>
   );
 
