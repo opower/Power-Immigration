@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '@material-ui/core/avatar';
+import Avatar from '@material-ui/core/Avatar';
 import img from '../../pages/assets/avatar.png'
 import image from '../../pages/assets/texture1.png';
 
