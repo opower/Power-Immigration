@@ -11,7 +11,7 @@ export default function News(){
   const [articles, setArticles] = useState(null)
 
   useEffect(() => {
-    axios.get('http://newsapi.org/v2/everything?' +
+    axios.get('https://newsapi.org/v2/everything?' +
     'sources=cbc-news&' +
     'q=Immigration&' +
     'q=migration&' +
