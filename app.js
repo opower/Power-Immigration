@@ -10,10 +10,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (res,req)=>{
-  res.render('index')
-})
-
 app.post('/submit', (res,req) => {
   let info = res.body.data;
   sendMail(info);
