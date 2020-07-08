@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build",
-    "server": "nodemon app.js -p $PORT"
+    "server": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
