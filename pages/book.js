@@ -7,7 +7,7 @@ export default function Book(){
 
   return(
     <div>
-      <NavMenu color={'#7be3d2'}/>
+      <NavMenu color={'cadetblue'}/>
       <Form/>
       <Footer/>
     </div>

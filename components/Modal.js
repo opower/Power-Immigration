@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const styles = {
   content : {
@@ -12,22 +11,27 @@ const styles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     width:'50%',
-    height:'25%'
+    height:'35%'
   },
   button:{
     backgroundColor:'cadetblue',
     color:'white',
-    padding:'.4rem',
-    width:45,
+    width:30,
     float:'right',
     fontSize:15
   },
   submit:{
-    padding:'1.5rem'
+    color:'white',
+    backgroundColor:'cadetblue',
+    padding:'.9rem',
+    borderRadius:'0%',
+    fontSize:'.75rem'
+  },
+  input:{
+    padding:'.9rem',
+    width:'30%'
   }
 };
-
-// Modal.setAppElement('#yourAppElement')
 
 export default function ModalComp(){
   let subtitle;
@@ -49,7 +53,7 @@ export default function ModalComp(){
 
   return(
     <div>
-    <button onClick={openModal}>Open Modal</button>
+    <Button onClick={openModal}>Open Modal</Button>
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
@@ -57,12 +61,12 @@ export default function ModalComp(){
       contentLabel="Example Modal"
     >
 
-      <button style={styles.button} onClick={closeModal}><b>X</b></button>
-      <h2 ref={_subtitle => (subtitle = _subtitle)}>Sign Up For Our Newsletter!</h2>
-      <p>Stay up-to-date on current Canadian immigration news and services</p>
+      <Button style={styles.button} onClick={closeModal}><b>X</b></Button>
+      <h2 style={{paddingTop:'2rem'}} ref={_subtitle => (subtitle = _subtitle)}>Sign Up For Our Newsletter!</h2>
+      <p style={{marginTop:'3rem'}}>Stay up-to-date on current Canadian immigration news and services</p>
       <form onSubmit={emailSubmit}>
-        <TextField type='email' name='email'label='email' variant='outlined' required onChange={event => setEmail(event.target.value)}/>
-        <button style={styles.submit} type='submit'>Submit</button>
+        <input style={styles.input} type='email' placeholder='email' name='email'label='email' variant='outlined' required onChange={event => setEmail(event.target.value)}/>
+        <button style={styles.submit} type='submit'>SUBMIT</button>
       </form>
     </Modal>
   </div>

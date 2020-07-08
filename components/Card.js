@@ -24,7 +24,8 @@ export default function MediaCard(props) {
 
   return (
     <>
-    {!articles ? null : articles.slice(0,9).map(article => {
+    {articles ? console.log(articles.urlToImage) : null}
+    {!articles ? null : articles.slice(0,6).map(article => {
       return(
         <div style={{display:'inline-flex'}}>
           <Card className={classes.root}>
@@ -39,7 +40,7 @@ export default function MediaCard(props) {
                   {article.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {article.description.length > 220 ? article.description.substring(0,220)+'...' : article.description}
+                  {article.description.length > 200 ? article.description.substring(0,180)+'...' : article.description}
                 </Typography>
               </CardContent>
             </CardActionArea>

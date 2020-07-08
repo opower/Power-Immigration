@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { div } from '@material-ui/core';
 
 export default function Footer (){
 
@@ -9,18 +8,18 @@ export default function Footer (){
 
   const emailSubmit = (event) => {
     event.preventDefault();
-    console.log(email)
+    document.getElementById('newsletter').reset();
   }
 
   const styles={
     container:{
-      backgroundColor:'#737373',
+      backgroundColor:'#8c8c8c',
       padding:'1rem',
       color:'white',
-      fontFamily:'Roboto Condensed',
+      fontFamily:'Roboto Condensed'
     },
     copy:{
-      backgroundColor:'#4d4d4d',
+      backgroundColor:'#666666',
       textAlign:'center',
       color:'white',
       fontFamily:'Roboto Condensed',
@@ -43,38 +42,44 @@ export default function Footer (){
       outline: 'none',
       border:'none',
       backgroundColor: '#e6e6e6',
-      padding:'.5rem'
+      padding:'.5rem',
+      width:'62%'
     }
   }
 
   return(
-      <><div style={styles.container}>
-        <div className='footer'>
-        <div>
-          <h4>Contact Us</h4>
-          (604)-753-8616 
-          <br/>
-          <a href='mailTo:info@powerimmigration.ca' style={{color:'white', textDecoration:'none'}}>info@powerimmigration.ca</a>
-        </div>
-        <div>
-          <h4>Social Media</h4>
-          <div style={{textAlign:'center'}}>
-            <a href='https://www.linkedin.com/in/samantha-power-04932289/' target="_blank"><FontAwesomeIcon style={styles.icon} icon={faLinkedin}/></a>
-            <a href='https://www.facebook.com/powerimmigration/' target="_blank"><FontAwesomeIcon style={styles.icon} icon={faFacebookSquare} /></a>
+      <>
+        <div style={styles.container}>
+          <div className='footer'>
+          <div>
+            <h4>Contact Us</h4>
+            (604) 753-8616 
+            <br/>
+            <a href='mailTo:info@powerimmigration.ca' style={{color:'white', textDecoration:'none'}}>info@powerimmigration.ca</a>
+          </div>
+          <div>
+            <h4>Social Media</h4>
+            <div style={{textAlign:'center'}}>
+              <a href='https://www.linkedin.com/in/samantha-power-04932289/' target="_blank"><FontAwesomeIcon style={styles.icon} icon={faLinkedin}/></a>
+              <a href='https://www.facebook.com/powerimmigration/' target="_blank"><FontAwesomeIcon style={styles.icon} icon={faFacebookSquare} /></a>
+            </div>
+          </div>
+          <div>
+            <h4>Signup For Our Newsletter</h4>
+            <form onSubmit={emailSubmit} id='newsletter'>
+              <input style={styles.input} type='email' placeholder='Email' required onChange={event => setEmail(event.target.value)}/>
+              <button style={styles.button}type='submit'>Submit</button>
+            </form>
+          </div>
+          <style jsx>{`
+            h4{font-size:1.1rem}
+          `}</style>
           </div>
         </div>
-        <div>
-          <h4>Signup For Our Newsletter</h4>
-          <form onSubmit={emailSubmit}>
-            <input style={styles.input} type='email' placeholder='Email' required onChange={event => setEmail(event.target.value)}/>
-            <button style={styles.button}type='submit'>Submit</button>
-          </form>
+        <div style={styles.copy}>
+          <h4 style={{margin:0, paddingBottom:'1rem'}}>Copyright © {new Date().getFullYear()} Made By Olivia</h4>
         </div>
-        </div>
-      </div>
-      <div style={styles.copy}>
-         <h4 style={{margin:0, paddingBottom:'1rem'}}>© {new Date().getFullYear()} Made By Olivia</h4>
-      </div></>
+      </>
   );
 
 }

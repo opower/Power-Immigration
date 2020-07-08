@@ -1,11 +1,9 @@
 import React from 'react';
 import NavMenu from '../components/NavMenu';
-import image from './assets/vancouver.jpg';
+import image from './assets/photo1.jpg';
 import About from '../components/About';
 import Footer from '../components/Footer'
 import ModalComp from '../components/Modal';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Index () {
@@ -21,25 +19,21 @@ export default function Index () {
       opacity:'.95',
       paddingTop:'30vh',
       marginTop: '-150px',
-      position: 'relative'
+      position: 'relative',
+      zIndex:'-1'
 
     },
     center:{
       textAlign:'center',
       color:'white',
-      fontFamily:'Lato',
       letterSpacing:2,
-      fontSize:'1.1rem'
+      fontSize:'1.1rem',
+      margin:'auto'
     },
     separator: {
       content:' ',
       backgroundColor:'white',
       width:'20%'
-    },
-    chevron:{
-      width:30,
-      height:30,
-      color:'#7be3d2'
     },
     button:{
       borderRadius:'50%',
@@ -51,15 +45,21 @@ export default function Index () {
     <>
       <NavMenu/>
       <div style={styles.background}>
-        <div className='view' style={styles.center}>
+        <div style={styles.center}>
           <h1>POWER IMMIGRATION AND CONSULTING</h1>
           <div className='separator'>♦</div>
           <h2 style={{fontFamily:'Roboto Condensed', color:'white'}}>Create Your Unique Canadian Experience</h2>
+          <style jsx>{`
+            h1{
+              text-shadow: 0px 0px 25px #000000;
+            }
+          
+          `}</style>
         </div>
       </div>
       <div>
         <About/>
-        <ModalComp/>
+        {/* <ModalComp/> */}
         <Footer/>
       </div>
     </>

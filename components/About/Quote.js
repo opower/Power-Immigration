@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import img from '../../pages/assets/iccrc.png'
+import img from '../../pages/assets/iccrc.png';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 export default function Quote(props){
 
   const quotes ={
     0:{
-      client:'Bob',
       quote:'Samantha is enthusiastic about helping others. She is professional, openminded and can think outside the box.'
     },
     1:{
-      client:'Optimus Prime',
       quote:'I admire her passion for her work and the way she constantly strives to learn more to help her career'
     },
     2:{
-      client:'Bugs Bunny',
       quote:'I admire her passion for her work and the way she constantly strives to learn more to help her career'
     }
   }
@@ -46,17 +45,18 @@ export default function Quote(props){
       flexDirection:'column',
       alignItems:'center',
       margin:'40px auto',
-      width: '680px',
+      maxWidth: '660px',
     },
     p:{
       textAlign:'center',
       marginBottom:20,
     },
     p1:{
-      fontSize:'1.4rem',
+      fontSize:'1.5rem',
       fontStyle:'italic',
       textAlign:'center',
       marginBottom:20,
+      fontFamily:'Playfair Display'
       
     },
     container:{
@@ -81,13 +81,13 @@ export default function Quote(props){
   }
 
   return(
-    <div style={styles.outer}>
-      <div style={{textAlign:'center', margin:'4rem'}}>
-        <div style={styles.card} className='testimonials'>
-          <p style={styles.p1}>"{current.quote}"</p>
-          <p style={styles.p}>- {current.client}</p>
-          <div style={styles.container}>
-            {Object.keys(quotes).map(index => (
+    <Container component='main' maxWidth='lg'>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={8} style={{alignSelf:'center'}}>
+          <div style={styles.card} className='testimonials'>
+           <p style={styles.p1}>"{current.quote}"</p>
+           <div style={styles.container}>
+             {Object.keys(quotes).map(index => (
               <span 
               data-quote={index}
               key={index}
@@ -96,24 +96,28 @@ export default function Quote(props){
           </div>
             <style jsx>{`
               span[data-quote="${active}"]:before{
-                background-color:cadetblue;
+                background-color:#7be3d2;
               }
               span:before{
                 content:' ';
                 height:7px;
                 width:7px;
                 border-radius:50%;
-                background-color:#7be3d2;
+                background-color:cadetblue;
                 transition: background-color 0.3s ease-in;
               }
             `}</style>
         </div>
-      </div>
-      {/* <div style={styles.aside}>
-        <p>Power Immigration and Consulting is licensed by the Immigration Consultants of Canada Regulatory Council.</p>
-        <img src={img} alt='iccrc'/>
-      </div> */}
-    </div>
+
+        </Grid>
+        <Grid item xs={12} sm={4} style={{margin:'40px auto', textAlign:'center'}} className='image'>
+        <h4 style={{fontFamily:'Roboto Condensed', color:'#404040'}}>Power Immigration and Consulting is licensed by the Immigration Consultants of Canada Regulatory Council.</h4>
+         <img src={img} alt='iccrc'style={{width:'100%', height:'auto'}}/>
+          
+        </Grid>
+      </Grid>
+
+    </Container>
   );
 }
 

@@ -1,10 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Bakervvile|Merriweather|Poppins|Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Poppins|Roboto+Condensed&display=swap');
 body{
   margin:0;
 }
+.MuiOutlinedInput-notchedOutline{
+  border-color: rgba(0,0,0,0,23);
+}
+.PrivateNotchedOutline-legendLabelled-204{
+  width: auto;
+  height: 11px;
+  display: block;
+  padding: 0;
+  font-size: 0.75em;
+  max-width: 0.01px;
+  text-align: left;
+  transition: max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  visibility: hidden;
+}
+
+.PrivateNotchedOutline-root-202{
+  top: -5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 8px;
+  border-radius: inherit;
+  pointer-events: none;
+}
 
 p{
-  font-family: 'Poppins' !important;
+  font-family: 'Poppins';
   font-size: 1.1rem;
   line-height:1.7;
   color:#595959;
@@ -14,14 +43,17 @@ a{
   transition: border-bottom 0.3s ease-in-out;
   padding-bottom: .2rem;
 
-}
-a:hover{
+}li a:hover{
   border-bottom: 2px solid white;
+}
+
+h3{
+  font-family: 'Poppins';
 }
 
 h1{
   font-family:'Roboto Condensed';
-  font-size:3rem
+  font-size:3rem;
 }
 
 .separator:before{
@@ -39,48 +71,41 @@ h1{
   border: 2px solid white;
 }
 
-.small:before{
+.service:before{
   float:left;
 }
-.small:after{
+.service:after{
   float:right;
 }
 
-.small:before, .small:after {
+.service:before, .service:after{
   display: block;
-  width: 45%;
   content: " ";
-  margin-top: 5px;
-  border: 2px solid black;
+  width: 43%;
+  margin-top: 10px;
+  border: 2px solid #404040;
 }
 
-/* span:before{
-  content:' ';
-  height:7px;
-  width:7px;
-  border-radius:50%;
-  background-color:#7be3d2;
-  transition: background-color 0.3s ease-in;
-} */
 h2{
   font-size:1.8rem;
   color:#404040;
   letter-spacing:1;
-  font-family:'Poppins';
+  font-family:'Roboto Condensed';
 }
 .footer{
   display:flex;
   justify-content:space-around;
 }
 
-@media screen and (max-width: 450px) {
-  /* body {
-    background-color: blue;
-  } */
+@media screen and (max-width: 600px) {
   .testimonials{
-    display:none !important;
-    background-color:green
+    margin:40px auto 0 !important;
   }
+
+  .image{
+    margin:0 auto 40px !important;
+  }
+
   .footer{
     text-align: center;
     display:block;
@@ -91,9 +116,12 @@ h2{
   
   .smallNav{
     display:flex !important;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 1rem;
-    
+  }
+
+  .navList{
+    display:flex !important;
   }
 
   .description{
@@ -108,8 +136,18 @@ h2{
   .description h2{
     margin-bottom: 3rem;
   }
+
+  .separator:before{
+    width:42% !important;
+  }
+  .separator:after{
+    width:42% !important;
+  }
+  .image{
+    width:-webkit-fill-available
+  }
 }
-@media screen and (max-width: 800px) and (min-width: 400px) {
+@media screen and (max-width: 1100px) and (min-width: 600px) {
   /* body {
     background-color: red;
   } */
@@ -126,7 +164,6 @@ h2{
   .description h2{
     margin-bottom: 3rem;
   }
-
 
 
 }

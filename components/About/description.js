@@ -10,6 +10,7 @@ export default function Description(){
       },
     center:{
       alignSelf: 'center',
+      margin:'auto'
     },
     p:{
       maxWidth:'60%',
@@ -20,7 +21,7 @@ export default function Description(){
   return(
     <div className='description' style={styles.container}>
       <div style={styles.center}>
-        <p style={{textAlign:'center', color:'#404040'}}>Est. 2017</p>
+        <p style={{textAlign:'center', color:'cadetblue'}}>Est. 2017</p>
         <h2 style={{fontSize:'1.5rem'}}>Why Power Immigration and Consulting?</h2>
       </div>
       <p style={styles.p}>We know that the Canadian immigration process can be overwhelming and difficult to navigate alone.<br/><br/>
