@@ -103,7 +103,7 @@ export default function NavMenu(props){
         <ul>
           <li><Link href="/"><a>Home</a></Link></li>
           <li><Link href="/services"><a>Services</a></Link></li>
-          <li><Link href="/news"><a>News</a></Link></li>
+          {/* <li><Link href="/news"><a>News</a></Link></li> */}
           <li><Link href="/book"><a>Book A Consultation</a></Link></li>
         </ul>
         <style jsx>{`
